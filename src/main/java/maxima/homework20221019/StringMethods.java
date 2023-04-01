@@ -27,7 +27,5 @@ public class StringMethods {
     System.out.printf("Is your first strings empty ?... \"%s\"%n", inputString.isEmpty());
     System.out.printf("Is your second strings empty ?... \"%s\"%n", inputString2.isEmpty());
     System.out.printf("Let's concatenate your strings: \"%s\"%n", inputString + inputString2);
-
-
   }
 }
