@@ -1,32 +1,43 @@
 Algorithm: Почистить пылесос
+
 //1) Вытащить бачок;
 Container container = vacuumCleaner.getContainer();
+
 //2) Перенести бачок в ванную комнату;
 Room bathroom;
 bathroom.bringInto(container);
 container.placeTo(bathroom);
+
 //3) Перенести и поставить в ванную мусорное ведро;
 Bin trashBin;
 bathroom.bringInto(trashBin);
 trashBin.placeTo(bathroom);
+
 //4) Убрать в сторону крышку ведра;
 trashBin.capOff();
+
 //5) Убрать в сторону крышку бачка;
 container.capOff();
+
 //6) Аккуратно вытряхнуть содержимое бачка в мусорное ведро;
 Dirt dirtFromContainer = container.getContent();
 trashBin.putIn(dirtFromContainer);
+
 //7) Закрыть крышку ведра;
 trashBin.capOn();
+
 //8) Закрыть крышку бачка;
 container.capOn();
+
 //9) Вернуть мусорное ведро на место;
 Room kitchen;
 bathroom.bringOut(trashBin);
 kitchen.bringInto(trashBin);
 trashBin.placeTo(kitchen);
+
 //10) Установить бачок в рабочее положение в пылесос;
 bathroom.bringOut(container);
 container.placeTo(vacuumCleaner);
 vacuumCleaner.setContainer(container);
+
 Result: Пылесос с чистой емкостью для мусора
