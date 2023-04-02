@@ -1,0 +1,79 @@
+Algorithm: Почитать несколько страниц книги
+1) Взять книгу;
+2) Открыть книгу;
+   if (начатая книга)
+   {
+   Открыть на закладке;
+   }
+   else
+   {
+   Открыть первую страницу;
+   }
+3) Прочитать главу;
+4) Положить закладку;
+5) Вернуть книгу на место;
+Result: Несколько прочитанных страниц книги
+
+
+class Book {
+    String author;
+    String name;
+    Page[] pages;
+    Page bookmark;
+    Place currentPlace;
+
+    public method open(Page page);
+    public method close();
+    public method setBookmark(Page page);
+    public method setCurrentPlace(Place place);
+    public method getNextPage(Page page)
+}
+
+class Reader {
+    Place address;
+    int eruditionLevel;
+    public method isReadBefore(Book);
+    public method readPage(Page page)
+    {
+    eruditionLevel++;
+    }
+}
+
+class Library {
+    Place address;
+}
+
+class Place {
+    String address;
+}
+
+//1) Взять книгу;
+Reader reader;
+Book book;
+book.setCurrentPlace(reader.address);
+
+//2) Открыть книгу;
+Page currentPage;
+if (reader.isReadBefore(book))
+{
+    currentPage = book.bookmark;
+}
+else
+{
+    currentPage = book.pages[0];
+}
+
+//3) Прочитать главу;
+do
+{
+reader.readPage(currentPage);
+currentPage = book.getNextPage(currentPage);
+}
+while(!isNewChapter(currentPage))
+
+//4) Положить закладку;
+book.setBookmark(currentPage);
+
+//5) Вернуть книгу на место;
+Library library;
+book.setCurrentPlace(library.address);
