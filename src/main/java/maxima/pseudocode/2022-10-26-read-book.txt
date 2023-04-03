@@ -27,6 +27,15 @@ class Book {
     public method setBookmark(Page page);
     public method setCurrentPlace(Place place);
     public method getNextPage(Page page)
+    public method getPrevPage(Page page)
+}
+
+class Pages {
+    String content;
+    public method isNewChapter(Page page)
+    {
+    page.content.contais("Chapter");
+    }
 }
 
 class Reader {
