@@ -2,8 +2,8 @@ package src.main.java.maxima.homework20221106.zoo;
 
 public class Animal extends Creature {
 
-    public Animal(String skill) {
-        super(skill);
+    public Animal(String type, String name, String skill) {
+        super(type, name, skill);
     }
 
     @Override
@@ -14,5 +14,9 @@ public class Animal extends Creature {
     @Override
     public String move() {
         return "Running";
+    }
+
+    public void jump() {
+        System.out.println("Animal is jumping");
     }
 }

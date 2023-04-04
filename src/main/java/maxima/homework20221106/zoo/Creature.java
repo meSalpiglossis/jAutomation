@@ -2,17 +2,30 @@ package src.main.java.maxima.homework20221106.zoo;
 
 public abstract class Creature {
 
+    private String type;
+    private String name;
     private String skill;
 
-    protected Creature(String skill) {
+    public Creature(String type, String name, String skill) {
+        this.type = type;
+        this.name = name;
         this.skill = skill;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getSkill() {
         return skill;
     }
 
-    public abstract String breath();
+    abstract public String breath();
 
-    public abstract String move();
+    abstract public String move();
+
 }
