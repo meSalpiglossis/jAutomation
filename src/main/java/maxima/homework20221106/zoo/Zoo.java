@@ -32,7 +32,7 @@ public class Zoo {
         creatures[8] = bird2;
         creatures[9] = bird3;
 
-        do {
+        while (true) {
             System.out.println("Who do you want to know more about?");
             for (int i = 1; i < creatures.length; i++) {
                 System.out.println(i + ". " + creatures[i].getName());
@@ -66,6 +66,6 @@ public class Zoo {
                     "---------------------------"
                 );
             }
-        } while (true);
+        }
     }
 }
