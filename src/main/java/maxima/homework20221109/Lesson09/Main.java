@@ -32,7 +32,7 @@ public class Main {
     }
 
     static public ArrayList<Drive> getEnginesArrayList() {
-        ArrayList<Drive> engines = new ArrayList<>();
+        ArrayList<Drive> engines = new ArrayList<>(100);
         engines.add(new Car());
         engines.add(new Minivan());
         engines.add(new JeepSUV());
