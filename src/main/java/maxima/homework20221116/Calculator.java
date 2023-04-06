@@ -55,7 +55,9 @@ public class Calculator {
     public double sqrt(double a){
         return result = Math.sqrt(a);
     }
+
     public double sqrt(){
         return result = sqrt(result);
     }
+
 }

@@ -3,9 +3,7 @@ package src.main.java.maxima.homework20221116;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -75,14 +73,16 @@ class TestCalculator{
         properties.load(fis);
         fis.close();
 
-        assertEquals(2, calculator.sqrt(Double.parseDouble((String) properties.get("sqrtTestData4"))));
-        assertEquals(3, calculator.sqrt(Double.parseDouble((String) properties.get("sqrtTestData9"))));
-        assertEquals(4, calculator.sqrt(Double.parseDouble((String) properties.get("sqrtTestData16"))));
+        assertEquals(Double.parseDouble((String) properties.get("sqrtTestData4Expected2")),
+            calculator.sqrt(Double.parseDouble((String) properties.get("sqrtTestData4"))));
+        assertEquals(Double.parseDouble((String) properties.get("sqrtTestData9Expected3")),
+            calculator.sqrt(Double.parseDouble((String) properties.get("sqrtTestData9"))));
+        assertEquals(Double.parseDouble((String) properties.get("sqrtTestData16Expected4")),
+            calculator.sqrt(Double.parseDouble((String) properties.get("sqrtTestData16"))));
     }
 
     @Test
     void sqrtMemoryTest() {
-        // TODO: Add reading input data for test from file
         assertEquals(0, calculator.sqrt());
     }
 }
