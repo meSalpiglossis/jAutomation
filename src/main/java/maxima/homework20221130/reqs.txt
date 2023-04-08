@@ -1,0 +1,61 @@
+\\\\ есть приложение, нужно залогиниться , после чего попадаем на homepage
+
+class BasePage
+
+class LoginPage extends BasePage
+
+class HomePage extends BasePage
+
+группировка наиболе важных элементов ui:
+    class WebElement (Selenium entity)
+    login_edit_box, password_edit_box, submit_button - LoginPage (с их помощью логинимся)
+    important_label - HomePage (с помощью локатора определяем что открылась нужная страница)
+
+\\\\ на этом моменте слой Page Object появился:
+\\\\ логические страницы LoginPage, HomePage
+\\\\ на них выделены только нужные элементы:
+\\\\ login_edit_box, password_edit_box, submit_button, important_label
+\\\\ элементы идентифицируются локаторами
+
+
+\\\\ следующий слой Business Actions
+\\\\ в данном случае все три слоя будут внутри одного класса
+\\\\ тем не менее для каждого из них должны быть чётко определены:
+\\\\ границы, назначение, отношения между слоями
+
+LoginPage.login(LoginData ld)
+class LoginData
+
+class LoginTest extends BaseTest
+Arrange phase
+Action phase
+
+Assert phase
+связан с HomePage, делаем проверку наличия элемента
+public boolean isImportantLabelAvaliable
+
+
+\\\\ реализация Low Level Actions
+реализация LoginPage.login -> enterLogin, enterPassword, clickSubmitButton
+
+
+\\\\ добавляем "двухфазную аутентификацию"
+phoneNumber, verificationCode to LoginData
+LoginPage - на 2 увеличивается количество Low Level Actions
++ 2 элемента к Page Object : phoneNumber_edit_box, verificationCode_edit_box
+
+
+\\\\ сделать версию использующую статические методы
+
+
+
+
+
+
+
+
+
+
+
+
+
