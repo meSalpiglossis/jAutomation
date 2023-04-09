@@ -1,6 +1,5 @@
-package src.main.java.maxima.homework20221130;
+package src.main.java.maxima.homework20221130.staticVersion;
 
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 

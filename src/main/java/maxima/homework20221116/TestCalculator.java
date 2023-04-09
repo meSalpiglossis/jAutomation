@@ -9,7 +9,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-class TestCalculator{
+class TestCalculator {
 
     private final Calculator calculator = new Calculator();
 

@@ -1,6 +1,6 @@
-package src.main.java.maxima.homework20221130;
+package src.main.java.maxima.homework20221130.staticVersion;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
     public void login(LoginData ld) {
         enterLogin(ld.getLogin());

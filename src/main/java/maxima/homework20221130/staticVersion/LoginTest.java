@@ -1,9 +1,9 @@
-package src.main.java.maxima.homework20221130;
+package src.main.java.maxima.homework20221130.staticVersion;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
     //TODO*: add 2 phase autentification for login fuctionality
     //LoginData add phoneNumber, verificationCode
     //TODO**: static method based version
@@ -20,7 +20,5 @@ public class LoginTest extends BaseTest{
         //Assert phase
         HomePage homePage = new HomePage();
         Assert.assertTrue("Home Page wasn't loaded in proper way. ", homePage.isImportantLabelAvaliable());
-
-
     }
 }
