@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static src.main.java.maxima.homework20221116.CalculatorV2.*;
+import static maxima.homework20221116.CalculatorV2.*;
 
 @RunWith(Parameterized.class)
 public class TestCalculatorV2 {
