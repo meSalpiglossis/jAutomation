@@ -4,3 +4,5 @@ out
 
 *.class
 *.jar
+/src/main/java/org/example/
+/src/test/java/org/example/
