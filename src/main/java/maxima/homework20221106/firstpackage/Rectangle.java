@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221106.firstpackage;
+package maxima.homework20221106.firstpackage;
 
 public class Rectangle implements Shape {
     private double length;

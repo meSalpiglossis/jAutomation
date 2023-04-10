@@ -1,6 +1,6 @@
-package src.main.java.maxima.homework20221106;
+package maxima.homework20221106;
 
-import src.main.java.maxima.homework20221106.firstpackage.*;
+import maxima.homework20221106.firstpackage.*;
 
 import java.io.FileNotFoundException;
 

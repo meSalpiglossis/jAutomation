@@ -1,6 +1,6 @@
-package src.main.java.maxima.homework20221102;
+package maxima.homework20221102;
 
-import src.main.java.maxima.homework20221102.geometrypackage.*;
+import maxima.homework20221102.geometrypackage.*;
 
 public class Main {
 

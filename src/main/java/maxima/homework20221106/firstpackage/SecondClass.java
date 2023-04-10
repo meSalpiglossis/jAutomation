@@ -1,6 +1,6 @@
-package src.main.java.maxima.homework20221106.firstpackage;
+package maxima.homework20221106.firstpackage;
 
-import src.main.java.maxima.homework20221106.firstpackage.FirstClass;
+import maxima.homework20221106.firstpackage.FirstClass;
 
 public class SecondClass {
 

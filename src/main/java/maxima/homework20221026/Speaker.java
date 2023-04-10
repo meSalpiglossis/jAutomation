@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221026;
+package maxima.homework20221026;
 
 public class Speaker {
   private final String manufacturer;

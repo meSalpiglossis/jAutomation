@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221102;
+package maxima.homework20221102;
 
 public class Document {
 

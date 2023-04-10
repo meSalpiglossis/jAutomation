@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221102.geometrypackage;
+package maxima.homework20221102.geometrypackage;
 
 public class Rectangle implements Shape{
 

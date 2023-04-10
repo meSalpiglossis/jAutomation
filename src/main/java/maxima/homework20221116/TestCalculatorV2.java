@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221116;
+package maxima.homework20221116;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

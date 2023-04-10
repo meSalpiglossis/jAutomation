@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221116;
+package maxima.homework20221116;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

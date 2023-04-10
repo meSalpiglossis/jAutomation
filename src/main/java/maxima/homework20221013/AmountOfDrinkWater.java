@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221013;
+package maxima.homework20221013;
 
 //Algorithm: проверить наличие питьевой воды
 public class AmountOfDrinkWater {

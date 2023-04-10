@@ -1,8 +1,8 @@
-package src.main.java.maxima.homework20221106.zoo;
+package maxima.homework20221106.zoo;
 
 import java.util.Scanner;
 
-import static src.main.java.maxima.homework20221106.zoo.Util.isPositiveDigit;
+import static maxima.homework20221106.zoo.Util.isPositiveDigit;
 
 public class Zoo {
 

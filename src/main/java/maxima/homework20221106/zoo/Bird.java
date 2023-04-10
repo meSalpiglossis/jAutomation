@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221106.zoo;
+package maxima.homework20221106.zoo;
 
 public class Bird extends Creature {
 

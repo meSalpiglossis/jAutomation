@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221026;
+package maxima.homework20221026;
 
 public class Student {
   private String firstName;

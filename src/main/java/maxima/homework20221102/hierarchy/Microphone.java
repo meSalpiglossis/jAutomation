@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221102.hierarchy;
+package maxima.homework20221102.hierarchy;
 
 public class Microphone extends AudioEquipment{
   final String type;

@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221019;
+package maxima.homework20221019;
 
 import java.util.Scanner;
 
