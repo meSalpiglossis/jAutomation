@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221130;
+package maxima.homework20221130;
 
 //Note that WebElement is Selenium entity
 public class WebElement {

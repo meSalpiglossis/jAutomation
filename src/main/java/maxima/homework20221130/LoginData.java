@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221130;
+package maxima.homework20221130;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -18,13 +18,13 @@ public class LoginData {
     static {
         System.out.println("LoginData: Loading Login Data from file...");
         loginData = new Properties();
-        InputStream is = LoginData.class.getResourceAsStream("/src/resources/creds.properties");
+//        InputStream is = LoginData.class.getResourceAsStream("/src/main/java/maxima/resources/creds.properties"); // doesn't work with Maven ?
         try {
-//            FileInputStream fileInputStream = new FileInputStream("src\\resources\\creds.properties");
-//            loginData.load(fileInputStream);
-//            fileInputStream.close();
-            loginData.load(is);
-            is.close();
+            FileInputStream fileInputStream = new FileInputStream("src\\main\\java\\maxima\\resources\\creds.properties");
+            loginData.load(fileInputStream);
+            fileInputStream.close();
+//            loginData.load(is);
+//            is.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
