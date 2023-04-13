@@ -3,7 +3,7 @@ package maxima.homework20221116;
 import java.security.InvalidParameterException;
 
 public class Calculator {
-    private double result = 0; // TODO: Impl me!
+    private double result = 0;
 
     public void cleanMemory() {
         result = 0;
@@ -35,7 +35,7 @@ public class Calculator {
 
     public double div(double a, double b) {
         if(b == 0){
-            throw new InvalidParameterException("Error: b == 0");
+            throw new InvalidParameterException("Can't divide by 0");
         }
         return result = a / b;
     }
@@ -53,11 +53,18 @@ public class Calculator {
     }
 
     public double sqrt(double a){
+        if(a < 0){
+            throw new InvalidParameterException("It's not possible to take the square root of a negative number");
+        }
         return result = Math.sqrt(a);
     }
 
     public double sqrt(){
         return result = sqrt(result);
+    }
+
+    public double getMemory() {
+        return result;
     }
 
 }
