@@ -3,7 +3,7 @@ package maxima.homework20221116;
 import java.security.InvalidParameterException;
 
 public class CalculatorV2 {
-    private static double result = 0; // TODO: Impl me!
+    private static double result = 0;
 
     public static void cleanMemory() {
         result = 0;
@@ -60,4 +60,7 @@ public class CalculatorV2 {
         return result = sqrt(result);
     }
 
+    public static double getMemory() {
+        return result;
+    }
 }

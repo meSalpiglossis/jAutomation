@@ -1,4 +1,4 @@
-package src.main.java.maxima.homework20221130.staticVersion;
+package maxima.homework20221130.staticVersion;
 
 public class BasePage {
 

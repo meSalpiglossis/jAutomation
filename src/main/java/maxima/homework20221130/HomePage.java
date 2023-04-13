@@ -1,6 +1,6 @@
 package maxima.homework20221130;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
     public boolean isImportantLabelAvaliable() {
         System.out.println("HomePage.isImportantLabelAvaliable = true");
