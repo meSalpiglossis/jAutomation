@@ -14,4 +14,10 @@ public class CalculatorNegativeTest {
     }
 
 
+    @Test(timeOut = 5000, expectedExceptions = InvalidParameterException.class)
+    public void sqrtNegativeNumberTest() {
+        Calculator calculator = new Calculator();
+        calculator.sqrt(-1);
+    }
+
 }

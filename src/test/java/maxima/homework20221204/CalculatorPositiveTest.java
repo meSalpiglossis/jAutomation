@@ -51,11 +51,6 @@ public class CalculatorPositiveTest {
         Assert.assertEquals(calculator.sqrt(a), result);
     }
 
-    @Test(timeOut = 5000, expectedExceptions = InvalidParameterException.class)
-    public void sqrtNegativeNumberTest() {
-        Calculator calculator = new Calculator();
-        calculator.sqrt(-1);
-    }
 
     @Test(timeOut = 5000)
     public void memoryTest() {
