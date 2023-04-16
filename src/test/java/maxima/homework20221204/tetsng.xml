@@ -3,7 +3,7 @@
 <suite name="Calculator tests">
     <test name="Unit tests">
         <classes>
-            <class name="maxima.homework20221204.CalculatorTest" />
+            <class name="maxima.homework20221204.CalculatorPositiveTest" />
             <class name="maxima.homework20221204.CalculatorNegativeTest" />
         </classes>
     </test>

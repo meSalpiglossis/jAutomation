@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.security.InvalidParameterException;
 
-public class CalculatorTest {
+public class CalculatorPositiveTest {
 
     @Test(timeOut = 5000, dataProvider = "Data For Add Test")
     public void addTest(double a, double b, double result) {
