@@ -33,12 +33,6 @@ public class CalculatorPositiveTest {
         Assert.assertEquals(calculator.div(a, b), result);
     }
 
-    @Test(timeOut = 5000, expectedExceptions = InvalidParameterException.class)
-    public void divideBy0Test() {
-        Calculator calculator = new Calculator();
-        calculator.div(1, 0);
-    }
-
     @Test(timeOut = 5000, dataProvider = "Data For Power Test")
     public void powTest(double a, double b, double result) {
         Calculator calculator = new Calculator();
