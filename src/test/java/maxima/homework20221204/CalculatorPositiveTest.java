@@ -1,62 +1,20 @@
 package maxima.homework20221204;
 
 import maxima.homework20221116.Calculator;
+
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.security.InvalidParameterException;
-
 public class CalculatorPositiveTest {
 
-    @Test(timeOut = 5000, dataProvider = "Data For Add Test")
-    public void addTest(double a, double b, double result) {
-        Calculator calculator = new Calculator();
-        Assert.assertEquals(calculator.add(a, b), result);
+    Calculator calculator;
+
+    @BeforeMethod
+    public void setup() {
+        calculator = new Calculator();
     }
-
-    @Test(timeOut = 5000, dataProvider = "Data For Subtract Test")
-    public void subTest(double a, double b, double result) {
-        Calculator calculator = new Calculator();
-        Assert.assertEquals(calculator.sub(a, b), result);
-    }
-
-    @Test(timeOut = 5000, dataProvider = "Data For Multiply Test")
-    public void mulTest(double a, double b, double result) {
-        Calculator calculator = new Calculator();
-        Assert.assertEquals(calculator.mul(a, b), result);
-    }
-
-    @Test(timeOut = 5000, dataProvider = "Data For Divide Test")
-    public void divTest(double a, double b, double result) {
-        Calculator calculator = new Calculator();
-        Assert.assertEquals(calculator.div(a, b), result);
-    }
-
-    @Test(timeOut = 5000, dataProvider = "Data For Power Test")
-    public void powTest(double a, double b, double result) {
-        Calculator calculator = new Calculator();
-        Assert.assertEquals(calculator.pow(a, b), result);
-    }
-
-    @Test(timeOut = 5000, dataProvider = "Data For Square Root Test")
-    public void sqrtTest(double a, double result) {
-        Calculator calculator = new Calculator();
-        Assert.assertEquals(calculator.sqrt(a), result);
-    }
-
-
-    @Test(timeOut = 5000)
-    public void memoryTest() {
-        Calculator calculator = new Calculator();
-        calculator.add(2, 2); //memory == 4
-        calculator.sub(2); //memory == 2
-        calculator.mul(4); //memory == 8
-        calculator.div(4); //memory == 2
-        calculator.pow(4); //memory == 16
-        Assert.assertEquals(calculator.sqrt(),4);
-    }
-
 
     @DataProvider(name = "Data For Add Test")
     public Object[][] dataForAddTest() {
@@ -66,6 +24,11 @@ public class CalculatorPositiveTest {
             {10, -20, -10},
             {-10,-20, -30}
         };
+    }
+
+    @Test(timeOut = 5000, dataProvider = "Data For Add Test")
+    public void addTest(double a, double b, double result) {
+        Assert.assertEquals(calculator.add(a, b), result);
     }
 
     @DataProvider(name = "Data For Subtract Test")
@@ -78,6 +41,11 @@ public class CalculatorPositiveTest {
         };
     }
 
+    @Test(timeOut = 5000, dataProvider = "Data For Subtract Test")
+    public void subTest(double a, double b, double result) {
+        Assert.assertEquals(calculator.sub(a, b), result);
+    }
+
     @DataProvider(name = "Data For Multiply Test")
     public Object[][] dataForMulTest() {
         return new Object[][] {
@@ -88,6 +56,11 @@ public class CalculatorPositiveTest {
         };
     }
 
+    @Test(timeOut = 5000, dataProvider = "Data For Multiply Test")
+    public void mulTest(double a, double b, double result) {
+        Assert.assertEquals(calculator.mul(a, b), result);
+    }
+
     @DataProvider(name = "Data For Divide Test")
     public Object[][] dataForDivTest() {
         return new Object[][] {
@@ -96,6 +69,11 @@ public class CalculatorPositiveTest {
             {10, -20, -0.5},
             {-10,-20, 0.5}
         };
+    }
+
+    @Test(timeOut = 5000, dataProvider = "Data For Divide Test")
+    public void divTest(double a, double b, double result) {
+        Assert.assertEquals(calculator.div(a, b), result);
     }
 
     @DataProvider(name = "Data For Power Test")
@@ -110,6 +88,11 @@ public class CalculatorPositiveTest {
         };
     }
 
+    @Test(timeOut = 5000, dataProvider = "Data For Power Test")
+    public void powTest(double a, double b, double result) {
+        Assert.assertEquals(calculator.pow(a, b), result);
+    }
+
     @DataProvider(name = "Data For Square Root Test")
     public Object[][] dataForSqrtTest() {
         return new Object[][] {
@@ -118,4 +101,20 @@ public class CalculatorPositiveTest {
             {0.25, 0.5},
         };
     }
+
+    @Test(timeOut = 5000, dataProvider = "Data For Square Root Test")
+    public void sqrtTest(double a, double result) {
+        Assert.assertEquals(calculator.sqrt(a), result);
+    }
+
+    @Test(timeOut = 5000)
+    public void memoryTest() {
+        calculator.add(2, 2); //memory == 4
+        calculator.sub(2); //memory == 2
+        calculator.mul(4); //memory == 8
+        calculator.div(4); //memory == 2
+        calculator.pow(4); //memory == 16
+        Assert.assertEquals(calculator.sqrt(),4);
+    }
+
 }
